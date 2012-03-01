@@ -192,7 +192,7 @@ namespace embree
 		}
 		
 		
-  		weight = mis(wi.pdf, pdflight);
+  		weight = mis(wi.pdf, pdflight); //TODO váha pre BRDF
 // 		if ( typeid(Obj) == typeid(*dg.material) && (type == SPECULAR_REFLECTION )) 
 // 		  weight = 1.0f;
 //  		if ( typeid(Obj) == typeid(*dg.material) && (type && DIFFUSE )) 
@@ -200,7 +200,7 @@ namespace embree
 		
 	if ( dot( diff.Ng, r.dir ) < 0 )
 	// && (type == DIFFUSE_REFLECTION ))	
-	    L += radiance * c * weight  / wi.pdf;
+	    L += radiance * c * weight  / wi.pdf; //TODO započítanie váhy
 		
 		
 		
