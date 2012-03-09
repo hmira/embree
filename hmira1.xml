@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+
+<scene>
+  <Group>
+
+    <!-- red sphere -->
+    <Sphere>
+      <position>150 100 270</position>
+      <radius>100</radius>
+      <numTheta>50</numTheta>
+      <numPhi>50</numPhi>
+      <material>
+        <code>"Obj"</code>
+        <parameters>
+          <float3 name="Kd">0.3 0.3 0.05</float3>
+          <float3 name="Ks">0.8 0.8 0.2 </float3>
+          <float  name="Ns">30</float>
+          <float3 name="Tf">0 0 0</float3>  
+        </parameters>
+      </material>
+    </Sphere>
+
+    <!-- green sphere -->
+    <Sphere>
+      <position>394 100 351</position>
+      <radius>100</radius>
+      <numTheta>50</numTheta>
+      <numPhi>50</numPhi>
+      <material>
+	<code>"Matte"</code>
+      <!--  <code>"MetallicPaint"</code> -->
+        <parameters>
+          <float name="eta">1.45</float>
+          <float3 name="reflectance">0.0 0.5 0.0</float3>
+        </parameters>
+      </material>
+    </Sphere>
+
+    <!-- phong -->
+    <!--<Sphere>
+      <position>300 100 210</position>
+      <radius>100</radius>
+      <numTheta>50</numTheta>
+      <numPhi>50</numPhi>
+      <material>
+        <code>"Obj"</code>
+        <parameters>
+          <float3 name="Kd">1 0.2 1</float3>
+          <float3 name="Ks">0.2 0.2 0.2</float3>
+          <float  name="Ns">0</float>
+          <float3 name="Tf">0 0 0</float3>  
+        </parameters>
+      </material>
+    </Sphere> -->
+
+
+    <!-- ground -->
+    <TriangleMesh>
+      <positions>
+        552.8 0.0 0.0 
+        0.0 0.0 0.0
+        0.0 0.0 559.2
+        549.6 0.0 559.2
+      </positions>
+      <normals></normals>
+      <texcoords></texcoords>
+      <triangles>
+        0 1 2
+        0 2 3
+      </triangles>
+      <material>
+        <code>"Matte"</code>
+        <parameters>
+          <float3 name="reflectance">0.5 0.5 0.5</float3>
+        </parameters>
+      </material>
+    </TriangleMesh>
+
+    <!-- ceiling -->
+    <TriangleMesh>
+      <positions>
+        556.0 548.8 0.0
+        556.0 548.8 559.2
+        0.0 548.8 559.2
+        0.0 548.8 0.0
+      </positions>
+      <normals></normals>
+      <texcoords></texcoords>
+      <triangles>
+        0 1 2
+        0 2 3
+      </triangles>
+      <material>
+        <code>"Matte"</code>
+        <parameters>
+          <float3 name="reflectance">0.5 0.5 0.5</float3>
+        </parameters>
+      </material>
+    </TriangleMesh>
+
+    <!-- back wall -->
+    <TriangleMesh>
+      <positions>
+        549.6   0.0 559.2
+        0.0   0.0 559.2
+        0.0 548.8 559.2
+        556.0 548.8 559.2
+      </positions>
+      <normals></normals>
+      <texcoords></texcoords>
+      <triangles>
+        0 1 2
+        0 2 3
+      </triangles>
+      <material>
+        <code>"Matte"</code>
+        <parameters>
+          <float3 name="reflectance">0.5 0.5 0.5</float3>
+        </parameters>
+      </material>
+    </TriangleMesh>
+
+    <!-- green wall -->
+    <TriangleMesh>
+      <positions>
+        0.0   0.0 559.2
+        0.0   0.0   0.0
+        0.0 548.8   0.0
+        0.0 548.8 559.2
+      </positions>
+      <normals></normals>
+      <texcoords></texcoords>
+      <triangles>
+        0 1 2
+        0 2 3
+      </triangles>
+      <material>
+        <code>"Matte"</code>
+        <parameters>
+          <float3 name="reflectance">0.0 0.5 0.0</float3>
+        </parameters>
+      </material>
+    </TriangleMesh>
+
+    <!-- red wall -->
+    <TriangleMesh>
+      <positions>
+        552.8   0.0   0.0
+        549.6   0.0 559.2
+        556.0 548.8 559.2
+        556.0 548.8   0.0
+      </positions>
+      <normals></normals>
+      <texcoords></texcoords>
+      <triangles>
+        0 1 2
+        0 2 3
+      </triangles>
+      <material>
+        <code>"Matte"</code>
+        <parameters>
+          <float3 name="reflectance">0.5 0.0 0.0</float3>
+        </parameters>
+      </material>
+    </TriangleMesh>
+
+    <!-- light -->
+    <QuadLight>
+      <AffineSpace>
+        530   0   0 13.0
+          0   0   1 547.2
+          0 505   0 27 0
+      </AffineSpace>
+      <!--<L>100 100 90</L>-->
+      <L> 4 4 3</L>
+    </QuadLight>
+
+  </Group>
+</scene>
